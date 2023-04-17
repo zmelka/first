@@ -1,0 +1,28 @@
+server:
+  port: 9000
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://43.201.179.139:3306/sbb_2nd?user=board&password=jj691105!&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeBehavior=convertToNull
+    username: board
+    password: jj691105!
+    passwordCharacterEncoding: UTF-8
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+        use_sql_comments: true
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: warn
