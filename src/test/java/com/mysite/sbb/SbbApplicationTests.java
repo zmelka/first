@@ -43,6 +43,7 @@ class SbbApplicationTests {
         }
     }
 
+
     @Test
     void testCreateUser2() {
         for (int i = 1; i <= 10; i++) {
@@ -51,16 +52,7 @@ class SbbApplicationTests {
             String password = "1234";
             userService.create(username, email, password);
         }
-    }
 
-    @Test
-    void testCreateUser() {
-        for (int i = 1; i <= 10; i++) {
-            String username = "user%02d".formatted(i);
-            String email = "%s@test.com".formatted(username);
-            String password = "1234";
-            userService.create(username, email, password);
-        }
     }
 
     @Test
